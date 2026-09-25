@@ -1,0 +1,10 @@
+models:
+  - name: b_bookings
+    config:
+      materialized: table
+  - name: b_listings
+    config:
+      materialized: table
+  - name: b_hosts
+    config:
+      materialized: table
