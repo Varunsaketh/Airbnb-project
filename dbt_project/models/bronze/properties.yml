@@ -1,11 +1,11 @@
 models:
   - name: b_bookings
     config:
-      materialized: table
+      materialized: incremental
       
   - name: b_listings
     config:
-      materialized: table
+      materialized: incremental
   - name: b_hosts
     config:
-      materialized: table
+      materialized: incremental
