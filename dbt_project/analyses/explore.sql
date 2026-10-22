@@ -1,2 +1,2 @@
 
-SELECT * FROM {{ref("b_listings")}} 
+SELECT * FROM {{ref("b_hosts")}} 
