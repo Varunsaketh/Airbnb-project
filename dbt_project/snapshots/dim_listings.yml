@@ -1,0 +1,9 @@
+snapshots:
+    - name: dim_listings
+      relation: ref('e_listings')
+      config:
+        database: AIRBNB
+        schema: GOLD
+        unique_key: LISTING_ID
+        strategy: timestamp
+        updated_at: LISTINGS_CREATED_AT

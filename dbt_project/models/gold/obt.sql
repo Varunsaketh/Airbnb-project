@@ -1,7 +1,7 @@
 {% set configs = [
     {
         "table": "AIRBNB.SILVER.s_bookings",
-    "columns" : "s_bookings.BOOKING_ID,s_bookings.LISTING_ID,s_bookings.TOTAL_AMOUNT,s_bookings.booking_status,s_bookings.BOOKING_DATE,s_bookings.CREATED_AT AS BOOKING_CREATED_AT",
+        "columns" : "s_bookings.BOOKING_ID,s_bookings.LISTING_ID,s_bookings.TOTAL_AMOUNT,s_bookings.booking_status,s_bookings.BOOKING_DATE,s_bookings.CREATED_AT AS BOOKING_CREATED_AT",
         "alias": "s_bookings"
 
     },
@@ -23,8 +23,7 @@ SELECT
     {% for c in configs %}
         {{ c.columns }}{% if not loop.last %},{% endif%}
     {%endfor%}
-FROM
-{{configs[0].table}} AS {{configs[0].alias}}
+FROM {{configs[0].table}} AS {{configs[0].alias}}
 {%for c in configs[1:]%}
     LEFT JOIN {{c.table}} AS {{c.alias}}
     ON {{c.join_condition}}
